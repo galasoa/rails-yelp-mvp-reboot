@@ -1,8 +1,11 @@
 <h1>Welcome to our Yelp knockoff!</h1>
+<hr>
+<%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-primary"%>
+<hr>
 <h2>Our list of restaurants:</h2>
 <ul>
   <% @restaurants.each do |restaurant| %>
-    <li><%= restaurant.name %> <%= link_to "Details", restaurant_path(restaurant)  %></li>
+    <li><%= restaurant.name %> | <%= link_to "Details", restaurant_path(restaurant) %></li>
   <% end %>
 </ul>
 
